@@ -19,13 +19,283 @@
   </header>
 
   <section class="hero">
-    <h1>Análisis de Vulnerabilidades</h1>
-    <p>Protege tus sistemas antes de que ocurra un ataque.</p>
+    <h1>¿Como identificar riesgos y vulnerabilidades en el mundo tecnologico?</h1>
+    <p>Aqui veremos cómo realizar un análisis de vulnerabilidades en redes y sistemas.</p>
   </section>
 
   <section class="section">
-    <h2>TEXTO DE PAGINA 1</h2>
-    <p>Aquí puedes escribir tus textos instructivos sobre cómo realizar un análisis de vulnerabilidades.</p>
+    <h2>¿Qué es un análisis de vulnerabilidades y por qué es importante?
+</h2>
+    <p>Un análisis de vulnerabilidades es un proceso que permite detectar fallos de seguridad en tus dispositivos, sistemas y redes, antes de que un ciberdelincuente los aproveche. Este análisis te ayuda a:
+
+Proteger tus datos personales o empresariales.
+
+Evitar robo de información, fraudes o pérdidas económicas.
+
+Cumplir con normativas de seguridad (en el caso de empresas).
+
+Mantener tus dispositivos funcionando correctamente.
+
+
+Es útil para cualquier persona o empresa, incluso si no tienes conocimientos técnicos.
+
+
+
+
+Glosario básico (para usuarios sin experiencia)
+
+Phishing: Engaño por correo electrónico o mensaje para que entregues información personal (como contraseñas o datos bancarios).
+
+Puertos abiertos: Son "puertas" que permiten que los dispositivos se comuniquen en red. Algunos pueden ser inseguros si están expuestos.
+
+Firewall: Sistema que bloquea conexiones no autorizadas desde o hacia tu red.
+
+Firmware: El software interno del router o dispositivo. Actualizarlo soluciona errores o vulnerabilidades.
+
+WPS: Función del router que permite conectarte sin contraseña, pero es insegura.
+
+Rootkit / Malware: Tipos de programas maliciosos que permiten a atacantes tomar el control del sistema sin que lo notes.
+
+Segmentación de red: Separar dispositivos por grupos (por ejemplo, computadoras, cámaras IP, invitados) para evitar que una falla afecte a todos.
+
+
+
+---
+
+Parte 1: Análisis de redes (Wi-Fi, cableadas, dispositivos conectados)
+
+Paso 1: Identificar todos los dispositivos conectados
+
+Objetivo: Saber qué hay conectado en tu red.
+
+Herramientas:
+
+Fing (Android/iOS)
+
+Advanced IP Scanner (Windows)
+
+Angry IP Scanner (Windows/Mac/Linux)
+
+
+Qué hacer:
+
+Escanea la red.
+
+Anota cada dispositivo: IP, tipo (PC, cámara, impresora), sistema operativo, y si es propio o no.
+
+
+Paso 2: Revisar la configuración del router o switch
+
+Objetivo: Evitar que el acceso a la red sea fácil para atacantes.
+
+Acciones:
+
+Cambia la contraseña por defecto del router.
+
+Actualiza el firmware (entra al panel de control del router desde un navegador).
+
+Desactiva WPS.
+
+Habilita el firewall del router.
+
+Usa cifrado WPA3. Si no está disponible, usa WPA2 (nunca WEP).
+
+
+Paso 3: Escaneo de puertos y servicios
+
+Objetivo: Identificar servicios que podrían ser atacados.
+
+Herramientas:
+
+Nmap (consola)
+
+Zenmap (versión con gráficos)
+
+
+Qué hacer:
+
+Escanea puertos abiertos.
+
+Identifica servicios peligrosos como:
+
+Telnet (inseguro)
+
+FTP sin cifrar
+
+Servicios web antiguos
+
+
+
+Paso 4: Detección de vulnerabilidades en red
+
+Objetivo: Buscar errores de seguridad automáticamente.
+
+Herramientas:
+
+OpenVAS (Linux)
+
+Nessus (Windows/Mac/Linux)
+
+Qualys FreeScan (online)
+
+
+Qué hacer:
+
+Ejecuta un escaneo.
+
+Prioriza vulnerabilidades:
+
+Críticas (acceso total, robo de datos)
+
+Altas (interferencia en el servicio)
+
+Medias (requieren ciertas condiciones)
+
+Bajas (poco impacto)
+
+
+
+
+
+
+Parte 2: Análisis de sistemas operativos y dispositivos
+
+Windows
+
+Ejecuta Windows Update.
+
+Haz un escaneo completo con Microsoft Defender.
+
+Usa Malwarebytes para detectar malware oculto.
+
+Revisa el listado de programas instalados.
+
+Ve a Panel de control > Cuentas de usuario y:
+
+Elimina usuarios innecesarios.
+
+Cambia contraseñas débiles.
+
+
+
+Mac (macOS)
+
+Actualiza desde Preferencias del sistema > Actualización de software.
+
+Usa Malwarebytes para Mac.
+
+Activa el firewall.
+
+Revisa permisos de aplicaciones desde Seguridad y privacidad.
+
+
+Linux
+
+Ejecuta:
+
+sudo apt update && sudo apt upgrade
+
+Escanea puertos:
+
+sudo netstat -tulpn
+
+o
+
+sudo ss -tulpn
+
+Escanea el sistema:
+
+Lynis
+
+Chkrootkit
+
+
+Usa firewall:
+
+sudo ufw enable
+
+
+Android
+
+Revisa y desinstala apps sospechosas.
+
+Usa:
+
+Malwarebytes Mobile
+
+Bitdefender Mobile Security
+
+
+Actualiza desde Google Play > Mis aplicaciones.
+
+
+iOS (iPhone/iPad)
+
+Actualiza desde Ajustes > General > Actualización de software.
+
+Revisa permisos de apps.
+
+Usa:
+
+Lookout
+
+Avira Mobile Security
+
+
+
+
+
+
+Parte 3: Informe y solución de vulnerabilidades
+
+Elabora un informe con:
+
+1. Lista de dispositivos analizados
+
+
+2. Fallas encontradas
+
+
+3. Nivel de riesgo: bajo, medio, alto, crítico
+
+
+4. Acciones recomendadas:
+
+Actualizar software
+
+Cambiar contraseñas
+
+Desinstalar apps innecesarias
+
+Bloquear puertos
+
+Apagar servicios inseguros
+
+Aplicar segmentación de red
+
+
+
+
+Aplica las correcciones según el orden de prioridad:
+
+1. Soluciona las fallas críticas inmediatamente.
+
+
+2. Luego corrige las fallas altas.
+
+
+3. Programa actualizaciones o mejoras para las fallas medias y bajas.
+
+
+
+
+
+
+Recomendaciones Finales
+
+Realiza un análisis cada 3 a 6 meses.
+
+Usa escaneos automáticos cuando sea posible.</p>
   </section>
 
   <footer>
